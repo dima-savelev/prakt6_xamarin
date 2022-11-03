@@ -1,0 +1,11 @@
+﻿<xct:Popup xmlns="http://xamarin.com/schemas/2014/forms"
+           xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+           xmlns:xct="clr-namespace:Xamarin.CommunityToolkit.UI.Views;assembly=Xamarin.CommunityToolkit"
+           x:Class="app6.Popup" Size="300,300" Color="Transparent">
+    <Frame CornerRadius="20" BackgroundColor="#333333">
+        <StackLayout VerticalOptions="CenterAndExpand">
+            <Label Text="Время вышло!" HorizontalOptions="Center" VerticalOptions="Center" FontSize="40" HorizontalTextAlignment="Center"/>
+            <Button Text="Ok" Clicked="Button_Clicked" HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="200" HeightRequest="50" CornerRadius="10"></Button>
+        </StackLayout>
+    </Frame>
+</xct:Popup>

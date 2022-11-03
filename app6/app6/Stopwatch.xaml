@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="app6.Stopwatch">
+    <ContentPage.Content>
+        <Grid>
+            <Label x:Name="sec" Text="00:00.00" FontSize="70" HorizontalTextAlignment="Center" Margin="0,10,0,150"></Label>
+            <Button Text="Start" x:Name="start" Clicked="Start_Clicked" VerticalOptions="Start" Margin="40,100,40,0" CornerRadius="20"></Button>
+            <Button Text="Pause" x:Name="pause" Clicked="Pause_Clicked" IsVisible="false" IsEnabled="False" VerticalOptions="Start" Margin="40,100,40,0" CornerRadius="20"></Button>
+            <Button Text="Add" Clicked="Add_Clicked" x:Name="addButton" IsVisible="false" IsEnabled="False" VerticalOptions="Start" Margin="40,160,40,0" CornerRadius="20"></Button>
+            <Button Text="Stop" IsVisible="false" x:Name="stop" IsEnabled="False" Clicked="Stop_Clicked" VerticalOptions="Start" Margin="40,100,40,0" CornerRadius="20"></Button>
+            <Button Text="Continue" x:Name="continueButton" IsVisible="false" IsEnabled="False" Clicked="Continue_Clicked" VerticalOptions="Start" Margin="40,160,40,0" CornerRadius="20"></Button>
+            <ListView x:Name="timerList" Margin="30,230,0,0" SelectionMode="None"></ListView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="app6.Watch">
+    <ContentPage.Content>
+        <Grid>
+            <Label x:Name="time" FontSize="54" HorizontalTextAlignment="Start" Margin="0,10,0,0" HorizontalOptions="Center"></Label>
+            <Label x:Name="date" FontSize="23" HorizontalTextAlignment="Start" Margin="20,80,0,0" HorizontalOptions="Center"></Label>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

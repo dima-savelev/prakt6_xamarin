@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="app6.Alarm">
+    <ContentPage.Content>
+        <StackLayout>
+            <TimePicker x:Name="timePicker" Format="HH:mm" PropertyChanged="timePicker_PropertyChanged" FontSize="40" HorizontalOptions="Center"></TimePicker>
+            <StackLayout x:Name="group1">
+                <StackLayout.Resources>
+                    <Style TargetType="RadioButton">
+                        <Setter Property="IsEnabled" Value="{Binding IsEnabled, Source={Reference group1}}"/>
+                        <Setter Property="FontSize" Value="25"/>
+                        <Setter Property="Margin" Value="3,0,0,0"/>
+                    </Style>
+                </StackLayout.Resources>
+                <RadioButton Content="Monday" CheckedChanged="RadioButton_CheckedChanged"></RadioButton>
+                <RadioButton Content="Tuesday" CheckedChanged="RadioButton_CheckedChanged"></RadioButton>
+                <RadioButton Content="Wednesday" CheckedChanged="RadioButton_CheckedChanged"></RadioButton>
+                <RadioButton Content="Thursday" CheckedChanged="RadioButton_CheckedChanged"></RadioButton>
+                <RadioButton Content="Friday" CheckedChanged="RadioButton_CheckedChanged"></RadioButton>
+                <RadioButton Content="Saturday" CheckedChanged="RadioButton_CheckedChanged"></RadioButton>
+                <RadioButton Content="Sunday" CheckedChanged="RadioButton_CheckedChanged"></RadioButton>
+            </StackLayout>
+            <Switch IsToggled="False" Toggled="Switch_Toggled" x:Name="switchToggle" HorizontalOptions="Start" Margin="5,10,0,0"></Switch>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

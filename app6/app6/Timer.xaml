@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="app6.Timer">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition  Height="20"></RowDefinition>
+                <RowDefinition Height="450"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid x:Name="startGrid" Grid.RowSpan="3" Grid.ColumnSpan="3">
+                <Grid.RowDefinitions>
+                    <RowDefinition  Height="20"></RowDefinition>
+                    <RowDefinition Height="450"></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Frame BackgroundColor="Transparent" BorderColor="#FF605F5F" Grid.Column="0" Grid.Row="1" CornerRadius="15" Margin="10,-10, 10,-10"></Frame>
+                <Frame BackgroundColor="Transparent" BorderColor="#FF605F5F" Grid.Column="1" Grid.Row="1" CornerRadius="15" Margin="10,-10, 10,-10"></Frame>
+                <Frame BackgroundColor="Transparent" BorderColor="#FF605F5F" Grid.Column="2" Grid.Row="1" CornerRadius="15" Margin="10,-10, 10,-10"></Frame>
+                <Grid Grid.Column="0" Grid.Row="1">
+                    <CarouselView x:Name="carousel1"
+                 PeekAreaInsets="190" ItemsSource="{Binding Hours}">
+                        <CarouselView.ItemsLayout>
+                            <LinearItemsLayout  Orientation="Vertical" SnapPointsType="Mandatory" SnapPointsAlignment="Center"/>
+                        </CarouselView.ItemsLayout>
+                        <CarouselView.ItemTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <VisualStateManager.VisualStateGroups>
+                                        <VisualStateGroup x:Name="CommonStates">
+                                            <VisualState x:Name="CurrentItem">
+                                                <VisualState.Setters>
+                                                    <Setter Property="Scale"
+                                        Value="1.1" />
+                                                </VisualState.Setters>
+                                            </VisualState>
+                                            <VisualState x:Name="PreviousItem">
+                                                <VisualState.Setters>
+                                                    <Setter Property="Opacity"
+                                        Value="0.5" />
+                                                </VisualState.Setters>
+                                            </VisualState>
+                                            <VisualState x:Name="NextItem">
+                                                <VisualState.Setters>
+                                                    <Setter Property="Opacity"
+                                        Value="0.5" />
+                                                </VisualState.Setters>
+                                            </VisualState>
+                                            <VisualState x:Name="DefaultItem">
+                                                <VisualState.Setters>
+                                                    <Setter Property="Opacity"
+                                        Value="0.25" />
+                                                </VisualState.Setters>
+                                            </VisualState>
+                                        </VisualStateGroup>
+                                    </VisualStateManager.VisualStateGroups>
+                                    <Label Text="{Binding}" HorizontalTextAlignment="Center" FontSize="40" VerticalTextAlignment="Center"/>
+                                </Grid>
+                            </DataTemplate>
+                        </CarouselView.ItemTemplate>
+                    </CarouselView>
+                </Grid>
+                <Grid Grid.Column="1" Grid.Row="1">
+                    <CarouselView x:Name="carousel2"
+                VerticalOptions="Center"
+                PeekAreaInsets="190" ItemsSource="{Binding Number}">
+                        <CarouselView.ItemsLayout>
+                            <LinearItemsLayout  Orientation="Vertical" SnapPointsType="Mandatory" SnapPointsAlignment="Center"/>
+                        </CarouselView.ItemsLayout>
+                        <CarouselView.ItemTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <VisualStateManager.VisualStateGroups>
+                                        <VisualStateGroup x:Name="CommonStates">
+                                            <VisualState x:Name="CurrentItem">
+                                                <VisualState.Setters>
+                                                    <Setter Property="Scale"
+                                        Value="1.1" />
+                                                </VisualState.Setters>
+                                            </VisualState>
+                                            <VisualState x:Name="PreviousItem">
+                                                <VisualState.Setters>
+                                                    <Setter Property="Opacity"
+                                        Value="0.5" />
+                                                </VisualState.Setters>
+                                            </VisualState>
+                                            <VisualState x:Name="NextItem">
+                                                <VisualState.Setters>
+                                                    <Setter Property="Opacity"
+                                        Value="0.5" />
+                                                </VisualState.Setters>
+                                            </VisualState>
+                                            <VisualState x:Name="DefaultItem">
+                                                <VisualState.Setters>
+                                                    <Setter Property="Opacity"
+                                        Value="0.25" />
+                                                </VisualState.Setters>
+                                            </VisualState>
+                                        </VisualStateGroup>
+                                    </VisualStateManager.VisualStateGroups>
+                                    <Label Text="{Binding}" HorizontalTextAlignment="Center" FontSize="40" VerticalTextAlignment="Center"/>
+                                </Grid>
+
+                            </DataTemplate>
+                        </CarouselView.ItemTemplate>
+                    </CarouselView>
+                </Grid>
+
+                <Grid Grid.Column="2" Grid.Row="1">
+                    <CarouselView x:Name="carousel3"
+                VerticalOptions="Center"
+                PeekAreaInsets="190" ItemsSource="{Binding Number}">
+                        <CarouselView.ItemsLayout>
+                            <LinearItemsLayout  Orientation="Vertical" SnapPointsType="Mandatory" SnapPointsAlignment="Center"/>
+                        </CarouselView.ItemsLayout>
+                        <CarouselView.ItemTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <VisualStateManager.VisualStateGroups>
+                                        <VisualStateGroup x:Name="CommonStates">
+                                            <VisualState x:Name="CurrentItem">
+                                                <VisualState.Setters>
+                                                    <Setter Property="Scale"
+                                        Value="1.1" />
+                                                </VisualState.Setters>
+                                            </VisualState>
+                                            <VisualState x:Name="PreviousItem">
+                                                <VisualState.Setters>
+                                                    <Setter Property="Opacity"
+                                        Value="0.5" />
+                                                </VisualState.Setters>
+                                            </VisualState>
+                                            <VisualState x:Name="NextItem">
+                                                <VisualState.Setters>
+                                                    <Setter Property="Opacity"
+                                        Value="0.5" />
+                                                </VisualState.Setters>
+                                            </VisualState>
+                                            <VisualState x:Name="DefaultItem">
+                                                <VisualState.Setters>
+                                                    <Setter Property="Opacity"
+                                        Value="0.25" />
+                                                </VisualState.Setters>
+                                            </VisualState>
+                                        </VisualStateGroup>
+                                    </VisualStateManager.VisualStateGroups>
+                                    <Label Text="{Binding}" HorizontalTextAlignment="Center" FontSize="40" VerticalTextAlignment="Center"/>
+                                </Grid>
+                            </DataTemplate>
+                        </CarouselView.ItemTemplate>
+                    </CarouselView>
+                </Grid>
+                <Button Text="Start" Clicked="Start_Clicked" Grid.ColumnSpan="3" Grid.Row="2" x:Name="start" Margin="90,90,90,90" CornerRadius="20"></Button>
+            </Grid>
+            
+            <Label x:Name="timer" Grid.ColumnSpan="3" Grid.Row="1" IsEnabled="False" IsVisible="False" HorizontalOptions="Center" VerticalOptions="Center" FontSize="60"></Label>
+            <Button Text="Pause" Clicked="Pause_Clicked" IsEnabled="False" IsVisible="False" x:Name="pause" Margin="10,315,80,90" Grid.ColumnSpan="2" Grid.Row="1" CornerRadius="15"></Button>
+            <Button Text="Stop" Clicked="Stop_Clicked" IsEnabled="False" IsVisible="False" x:Name="stop" Grid.ColumnSpan="3" Grid.Row="1" Margin="200,315,10,90" CornerRadius="15"></Button>
+            <Button Text="Continue" Clicked="Continue_Clicked" IsEnabled="False" IsVisible="False" x:Name="continueButton" Margin="10,315,80,90" Grid.ColumnSpan="2" Grid.Row="1" CornerRadius="15"></Button>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
